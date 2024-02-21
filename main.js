@@ -1,9 +1,13 @@
-var pontinhos = 0;
-function boaresposta() {
-    pontinhos = pontinhos + 1;
-    console.log(pontinhos);
-    document.getElementById('pontosvar').innerText = pontinhos;
-}
-botao.addEventListener('boaresposta', boaresposta()) ;
-    // Aqui você pode colocar o que deseja que aconteça quando o botão for pressionado
+document.addEventListener('DOMContentLoaded', function() {
+    var pontinhos = 0;
 
+    function boaresposta() {
+        pontinhos++;
+        console.log(pontinhos);
+        document.getElementById('pontosvar').innerText = pontinhos;
+    }
+
+    document.getElementById('bomb1').addEventListener('click', boaresposta);
+    document.getElementById('bomb2').addEventListener('click', boaresposta);
+    document.getElementById('bomb3').addEventListener('click', boaresposta);
+});
